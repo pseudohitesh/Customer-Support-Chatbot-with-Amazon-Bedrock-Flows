@@ -1,0 +1,56 @@
+{
+  "tests": [
+    {
+      "id": "bug-001",
+      "prompt": "The checkout page is broken. When I click place order, nothing happens.",
+      "expected": "Route as BUG REPORT. The description is present, stepsTOReproduce and environment are missing. Ask only one question about the next missing field and do not call create_bug_report yet."
+    },
+    {
+      "id": "bug-002",
+      "prompt": "The login button is not working. I open the sign-in page, enter my email and password, and click sign In, but the page does nothing.I'm using chrome on Windows 11.",
+      "expected": "Route as BUG REPORT. All three requried fields are available. Call create_bug_report exactly once with the customer's description, reproduction steps, and Chrome/Windows 11 environment. After success, provide the returned ticket ID and say the engineering team will follow up."
+    },
+    {
+      "id": "bug-003",
+      "prompt": " My payment keeps failing on the webiste. I open checkout, enter my card details, and click pay, and then I get an error. I'm on Safari on an iphone.",
+      "expected": "Route as BUG REPORT because something is failing. All three requried fields are present, so call create_bug_report exactly once. Do not answer this with the FAQ's, general payment-decline reasons."
+    },
+    {
+      "id": "bug-004",
+      "prompt": " The order tracking page isn't working. I sign in, open my orders, and click the tracking link, but the tracking page stays blank. I haven't given you my device details yet.",
+      "expected": " Route as BUG REPORT. Desription and stepsToReproduce are prsent, but environemnt is missing. Ask only for the environemnt in one question and do not call create_bug_report yet."
+    },
+    {
+      "id": "platform-001",
+      "prompt": " Do I need an account to place an order?",
+      "expected": " Route as PLATFORM QUESTION. Answer only from the FAQ: no account is requried because checkout can be done as a guest; an accont enables order tracking, saved addressess, and faster future checkout, Do not create a bug report."
+    },
+    {
+      "id": "platform-002",
+      "prompt": " How long does the delivery take?",
+      "expected": " Route as PLATFORM QUESTION. State that estimated delivery times appear at checkout and in the shipping confirmation email, and processing typically takes 1-2 business days before dispatch. Do not invent a fixed delivery time."
+    },
+    {
+      "id": "platform-003",
+      "prompt": " Why was my order cancled?",
+      "expected": " Route as PLATFORM QUESTION. Explain from the FAQ that the reason include payemnt authorisation issues, stock availability or auomated fraud checks, and that the customer will not be charged or will be refunded automatically. Do not add unsupported reasons"
+    },
+    {
+      "id": "platform-004",
+      "prompt": " Can i exchange an item?",
+      "expected": "Route as PLATFORM QUESTION. Answer from the FAQ that direct exchanges are usually not offered; the fastest option is to return the original item if eligible and place a new order. Do not invent an exchange process."
+    },
+    {
+      "id": "other-001",
+      "prompt": "Can you recommend a good laptop for video editing?",
+      "expected": "Route as OTHER REQUEST because this is neither a bug report nor a question covered by the FAQ. Politely say you cannot help with that request here and refer the customer to 1-800-555-0199(Mon-Fri). Do not invent additional support details."
+    },
+    {
+      "id": "other-002",
+      "prompt": "What is your policy for price watching a competitor's price?",
+      "expected": " Route as OTHER REQUEST because the FAQ does not contain enough information about price-matching. Politely say you cannot help with that request here and refer teh customer to 1-800-555-0199 (Mon-Fri). Do not invent a price-matching policy."
+    }
+  ]
+}
+
+

@@ -1,0 +1,6 @@
+A customer-support chatbot that routes requests into Bug Report, Platform Question, and Other Request categories.
+Bug reports collect description, stepsToReproduce, and environment before creating a ticket.
+The chatbot was evaluated across 10 test cases with an overall correctness score of 85%.
+It uses FAQ-based responses for platform-related questions.
+Unsupported requests are directed to the appropriate human support channel.
+The workflow integrates with a bug-report tool to create and track reported issues.
